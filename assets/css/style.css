@@ -1,0 +1,449 @@
+/*/     FONT     /*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/*/     BASE     /*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*/     VARIABLES    /*/
+:root {
+    /*/     Colors     /*/
+    --black: #000000;
+    --white: #ffffff;
+    --gray: #6c757d;
+    --light: #f8f9fa;
+    --dark: #10161d;
+
+    --dark-translucent: #10161d40;
+
+    --blue: #0d6efd;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #d63384;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #198754;
+    --teal: #20c997;
+    --cyan: #0dcaf0;
+
+    --gray-100: #f8f9fa;
+    --gray-200: #e9ecef;
+    --gray-300: #dee2e6;
+    --gray-400: #ced4da;
+    --gray-500: #adb5bd;
+    --gray-600: #6c757d;
+    --gray-700: #495057;
+    --gray-800: #343a40;
+    --gray-900: #212529;
+
+    --btn-light: #fff;
+
+    /*/     Font-size     /*/
+    --fs-1: 36px;
+    --fs-2: 32px;
+    --fs-3: 28px;
+    --fs-4: 22px;
+    --fs-5: 18px;
+    --fs-6: 16px;
+    --fs-7: 14px;
+
+    --font-montserrat: 'Montserrat', sans-serif;
+
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        /*/     Font-size     /*/
+        --fs-1: 32px;
+        --fs-2: 28px;
+        --fs-3: 22px;
+        --fs-4: 20px;
+        --fs-5: 18px;
+        --fs-6: 16px;
+        --fs-7: 14px;
+    }
+}
+@media screen and (max-width: 576px) {
+    :root {
+        /*/     Font-size     /*/
+        --fs-1: 28px;
+        --fs-2: 22px;
+        --fs-3: 20px;
+        --fs-4: 18px;
+        --fs-5: 16px;
+        --fs-6: 14px;
+        --fs-7: 12px;
+    }
+}
+
+body.dark {
+    --black: #ffffff;
+    --white: #000000;
+    --gray: #6c757d;
+    --light: #10161d;
+    --dark: #f8f9fa;
+
+    --gray-100: #212529;
+    --gray-200: #343a40;
+    --gray-300: #495057;
+    --gray-400: #6c757d;
+    --gray-500: #adb5bd;
+    --gray-600: #ced4da;
+    --gray-700: #dee2e6;
+    --gray-800: #e9ecef;
+    --gray-900: #f8f9fa;
+
+    --dark-translucent: #f8f9fa40;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--fs-6);
+    line-height: normal;
+    font-weight: 500;
+    font-family: var(--font-montserrat);
+    color: var(--dark);
+    background: var(--light);
+
+    transition: 1s;
+}
+body.no-scroll {
+    overflow: hidden;
+}
+
+.container {
+    max-width: 768px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    line-height: 1.2;
+}
+h1, .h1 {font-size: var(--fs-1);}
+h2, .h2 {font-size: var(--fs-2);}
+h3, .h3 {font-size: var(--fs-3);}
+h4, .h4 {font-size: var(--fs-4);}
+h5, .h5 {font-size: var(--fs-5);}
+h6, .h6 {font-size: var(--fs-6);}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+small {
+    color: var(--gray);
+}
+
+img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+li {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    background: transparent;
+    border: none;
+    font-family: inherit;
+    color: inherit;
+    font-size: var(--fs-6);
+    cursor: pointer;
+}
+.button {
+    padding: 6px 16px;
+    border: 1px solid var(--light);
+    border-radius: 6px;
+    background: var(--light);
+    color: var(--dark);
+    font-size: var(--fs-6);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.button:hover {
+    color: var(--blue);
+}
+
+.button.blue {
+    background: var(--blue);
+    color: #f8f9fa;
+}
+
+/*/     ADDITON    /*/
+.full__container,
+.profil__container,
+.profil__image,
+.profil__info,
+.profil__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button-50x50 {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 6px;
+
+    font-size: var(--fs-4);
+    color: var(--black);
+    transition: 0.3s;
+}
+.button-50x50:hover {
+    color: var(--blue);
+}
+.button-50x50.blue {
+    background: var(--blue);
+    color: #f8f9fa;
+}
+
+.hover-blue {
+    transition: 0.3s;
+}
+.hover-blue:hover {
+    color: var(--blue);
+}
+
+/*/     PROFIL    /*/
+.profil {
+    position: relative;
+    width: 100%;
+}
+/*/     profil container    /*/
+.profil__container {
+    height: 100vh;
+
+    flex-direction: column;
+    row-gap: 32px;
+}
+/*/     profil image    /*/
+.profil__image {
+    width: 300px;
+    height: 300px;
+    border: 4px solid var(--gray);
+    border-radius: 50%;
+}
+.profil__image > img {
+    width: 97%;
+    height: 97%;
+
+    border-radius: 50%;
+}
+/*/     profil name    /*/
+.profil__name {
+    text-align: center;
+}
+/*/     profil social    /*/
+.profil__social {
+    column-gap: 16px;
+}
+/*/     profil info    /*/
+.profil__info {
+    text-align: center;
+    column-gap: 16px;
+}
+.profil__info-item {
+    max-width: 95px;
+}
+/*/     profil theme    /*/
+.profil__theme {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 1;
+}
+/*/     filter responsive     /*/
+@media screen and (max-width: 993px) {
+    .profil__image {
+        width: 170px;
+        height: 170px;
+    }
+}
+
+/*/     PROFIL AND    /*/
+
+/*/     FILTER     /*/
+
+.filter {
+    width: 100%;
+    padding: 96px 0;
+}
+
+.filter__tabs-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 64px;
+}
+
+.filter__tabs {
+    width: min-content;
+    display: flex;
+    column-gap: 16px;
+    padding: 8px;
+    background: var(--gray-200);
+    border-radius: 12px;
+}
+
+.filter__tab-button.active {
+    background: var(--blue);
+    color: #f8f9fa;
+    border-color: var(--blue);
+}
+
+/*/     FILTER AND     /*/
+
+/*/     PROJECT & SKILLS     /*/
+.projects {
+
+}
+.project__container {
+
+}
+.project__row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 32px;
+}
+.project__item {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 6px;
+    border: 4px solid var(--gray);
+
+    box-shadow: 4px 4px 8px 0px var(--dark-translucent);
+}
+.project__image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: block;
+
+    overflow: hidden;
+}
+.project__image::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--project-image);
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: top;
+
+    transition: 10s;
+
+    z-index: -1;
+}
+.project__image:hover::before {
+    background-position-y: bottom;
+}
+
+.project__image-link {
+    position: absolute;
+    right: 6px;
+    bottom: 6px;
+    z-index: 1;
+}
+
+
+.projects, .skills {
+    width: 100%;
+    display: none;
+}
+.projects.active {
+    display: block;
+}
+
+.skills.active {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+}
+
+.skills__row{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 32px;
+}
+.skills__item {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 32px;
+}
+
+.skills__circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.skills__circle-progress {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(var(--blue) calc(var(--progress) * 3.6deg), var(--gray-200) 0deg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.skills__text {
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+    background: var(--light);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media screen and (max-width: 769px) {
+    .skills__circle {
+        width: 135px;
+        height: 135px;
+    }
+    .project__row, .skills__row {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .project__item {
+        width: 250px;
+        height: 200px;
+    }
+
+    .skills__circle {
+        width: 105px;
+        height: 105px;
+    }
+}
